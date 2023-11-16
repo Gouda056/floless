@@ -48,10 +48,6 @@ function Navbar() {
   const [userid, setUserid] = useState(null);
   const { data: session } = useSession();
 
-  useEffect(() => {
-    if (session) setUserid(session?.userdetails.id);
-  }, [session]);
-
   const handleOpenNavMenu = () => {
     if (sidebarOpen) {
       setSidebarOpen(false);

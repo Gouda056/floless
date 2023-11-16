@@ -8,7 +8,7 @@ import {
 } from "swiper/modules";
 import SwiperCore from "swiper";
 import { Typography, Box, CardMedia } from "@mui/material";
-// import "animate.css";
+import "animate.css";
 
 // Import Swiper styles
 import "swiper/swiper-bundle.css";

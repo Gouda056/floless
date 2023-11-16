@@ -1,6 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
   reactStrictMode: true,
-}
-
-module.exports = nextConfig
+  images: {
+    domains: [
+      "floless-development.s3.ap-south-1.amazonaws.com",
+      "floless-dev-org.s3.ap-south-1.amazonaws.com",
+    ],
+  },
+  compiler: {
+    styledComponents: true,
+  },
+};

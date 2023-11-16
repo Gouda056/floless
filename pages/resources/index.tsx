@@ -1,4 +1,3 @@
-// @ts-nocheck
 import Blogs from "../../src/components/landing/resources/blogs/blogs";
 import { resources } from "../../src/components/landing/resources/Topsection/data";
 import { blogs } from "../../src/components/landing/resources/blogs/data";

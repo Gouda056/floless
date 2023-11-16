@@ -8,13 +8,14 @@ import {
   OutlinedInput,
   TextField,
 } from "@mui/material";
-import GlobalLoader from "../../globalLoader";
+import GlobalLoader from "../../common/globalLoader";
 import React, { useState } from "react";
-import CustomTextField from "../../customTextField";
-import CustomFormLabel from "../../customFormLabel";
-import CustomCheckbox from "./customCheckbox";
+import CustomFormLabel from "../../forms/theme-elements/customFormLabel";
+import CustomTextField from "../../forms/theme-elements/customTextField";
+import CustomCheckbox from "../../forms/theme-elements/customCheckbox";
 import * as yup from "yup";
 import { FormikValues, useFormik } from "formik";
+import CustomOutlinedInput from "../../forms/theme-elements/customOutlinedInput";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import Link from "next/link";
@@ -139,7 +140,7 @@ const GetInTouch = () => {
       })
       .catch((error) => {
         setLoading(false);
-        toast.error(error?.response?.message);
+        toast.error(error?.response?.data?.message);
       })
       .finally(() => {
         setLoading(false);
