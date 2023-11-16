@@ -1,6 +1,7 @@
 import { Grid, Typography, Box, Button, Stack } from "@mui/material";
+import Logo from "../../layouts/full/shared/logo/Logo";
+import CustomOutlinedInput from "../forms/theme-elements/customOutlinedInput";
 import Link from "next/link";
-import CustomOutlinedInput from "../customOutlinedInput";
 
 const Footer = () => {
   const home = ["How it works?", "Features", "Reviews", "Brands", "FAQs"];
