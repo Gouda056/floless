@@ -62,7 +62,7 @@ const Faq = ({ FAQType, open, setOpen }: any) => {
             component="span"
             sx={{
               lineHeight: "40px",
-
+              fontSize : "20px",
               WebkitTextStrokeWidth: "1.1px",
               WebkitTextStrokeColor: "black",
               letterSpacing: "1px",

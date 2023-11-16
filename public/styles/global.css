@@ -1,7 +1,9 @@
 @font-face {
   font-family: "VisbyCF-Regular";
-  src: url("/fonts/VisbyCF-Regular.otf");
+  src: url("../fonts/VisbyCF-Regular.otf");
 }
+
+
 
 .font-visby {
   font-family: "VisbyCF-Regular";

@@ -48,9 +48,6 @@ function Navbar() {
   const [userid, setUserid] = useState(null);
   // const { data: session } = useSession();
 
-  // useEffect(() => {
-  //   if (session) setUserid(session?.userdetails.id);
-  // }, [session]);
 
   const handleOpenNavMenu = () => {
     if (sidebarOpen) {
@@ -68,11 +65,11 @@ function Navbar() {
     }
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", listenScrollEvent);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", listenScrollEvent);
 
-    return () => window.removeEventListener("scroll", listenScrollEvent);
-  }, []);
+  //   return () => window.removeEventListener("scroll", listenScrollEvent);
+  // }, []);
 
   return (
     <div>
@@ -116,14 +113,14 @@ function Navbar() {
                   display: "flex",
                   padding: page.name === "Get Started" ? "12px 20px" : "0",
                   fontSize: page.name === "Get Started" ? "16px" : "16px",
-                  fontWeight:
-                    page.href === window.location.pathname ? "700" : "500",
-                  color:
-                    page.name === "Get Started"
-                      ? "White"
-                      : page.href === window.location.pathname
-                      ? "#2970FF"
-                      : "black",
+                  // fontWeight:
+                  //   page.href === window.location.pathname ? "700" : "500",
+                  // color:
+                  //   page.name === "Get Started"
+                  //     ? "White"
+                  //     : page.href === window.location.pathname
+                  //     ? "#2970FF"
+                  //     : "black",
                   backgroundColor:
                     page.name === "Get Started" ? "#2970FF" : "transparent",
                   ":hover": {
@@ -225,14 +222,14 @@ function Navbar() {
                     display: "flex",
                     padding: page.name === "Get Started" ? "12px 20px" : "0",
                     fontSize: page.name === "Get Started" ? "16px" : "16px",
-                    fontWeight:
-                      page.href === window.location.pathname ? "700" : "500",
-                    color:
-                      page.name === "Get Started"
-                        ? "White"
-                        : page.href === window.location.pathname
-                        ? "#2970FF"
-                        : "black",
+                    // fontWeight:
+                    //   page.href === window.location.pathname ? "700" : "500",
+                    // color:
+                    //   page.name === "Get Started"
+                    //     ? "White"
+                    //     : page.href === window.location.pathname
+                    //     ? "#2970FF"
+                    //     : "black",
                     backgroundColor:
                       page.name === "Get Started" ? "#2970FF" : "transparent",
                     marginLeft: page.name === "Get Started" ? "6vw" : "0vw",

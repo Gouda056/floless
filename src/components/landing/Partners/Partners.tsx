@@ -2,7 +2,6 @@ import React from "react";
 import { Box, Typography, Grid, Button } from "@mui/material";
 import { logos } from "./data";
 import { motion } from "framer-motion";
-import Logo from "../../../layouts/full/shared/logo/Logo";
 import Link from "next/link";
 
 const marqueeVariants = {

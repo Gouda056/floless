@@ -8,11 +8,11 @@ import {
   OutlinedInput,
   TextField,
 } from "@mui/material";
-import GlobalLoader from "../../common/globalLoader";
+import GlobalLoader from "../../globalLoader";
 import React, { useState } from "react";
-import CustomFormLabel from "../../forms/theme-elements/customFormLabel";
-import CustomTextField from "../../forms/theme-elements/customTextField";
-import CustomCheckbox from "../../forms/theme-elements/customCheckbox";
+import CustomTextField from "../../customTextField";
+import CustomFormLabel from "../../customFormLabel";
+import CustomCheckbox from "./customCheckbox";
 import * as yup from "yup";
 import { FormikValues, useFormik } from "formik";
 import axios from "axios";
