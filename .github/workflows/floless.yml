@@ -1,1 +1,32 @@
-this is our website
+name: CI/CD Flowless
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  Copy_Code_and_Up_the_Containers:
+    runs-on: self-hosted
+
+    steps: 
+      - name: Checkout code
+        uses: actions/checkout@v2.5.0
+      
+      - name: Set up environment
+        run: |
+          echo "CODE_PATH= /home/ubuntu/floless-website" >> $GITHUB_ENV
+
+          
+      - name: Copy code to EC2
+        run: |
+          # Copy the repository code to the EC2 instance
+          rsync -avz ./ $CODE_PATH
+              
+      - name: Build with Docker Compose
+        run: |
+          cd $CODE_PATH && npm install pm2 -g
+          
+      - name: Build with Docker Compose
+        run: |
+          cd $CODE_PATH && pm2 start npm --name website -- start
