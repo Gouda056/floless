@@ -6,7 +6,7 @@ on:
       - dev
 
 jobs:
-  Copy_Code_and_Up_the_Containers:
+  Copy_Code_and_deploy_the_website:
     runs-on: self-hosted
 
     steps: 
