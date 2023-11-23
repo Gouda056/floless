@@ -12,12 +12,16 @@ jobs:
     steps: 
       - name: Checkout code
         uses: actions/checkout@v2.5.0
-      
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.14.2'
+
       - name: Set up environment
         run: |
           echo "CODE_PATH=/home/ubuntu/floless-website" >> $GITHUB_ENV
 
-          
       - name: Copy code to EC2
         run: |
           # Copy the repository code to the EC2 instance
