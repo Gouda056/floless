@@ -62,7 +62,7 @@ const MyApp = (props: MyAppProps) => {
       <CacheProvider value={emotionCache}>
         <Head>
           <meta name="viewport" content="initial-scale=1, width=device-width" />
-          <title>Flooowless</title>
+          <title>Floless</title>
           <style>
             @import url('
             https://fonts.googleapis.com/css2?family=Bevan&family=Concert+One&family=Figtree&family=Lato&family=Lilita+One&family=Merriweather&family=Monoton&family=Montserrat&family=Noto+Sans&family=Noto+Serif&family=Nunito+Sans:opsz@6..12&family=Open+Sans&family=Oswald&family=PT+Sans&family=Prompt&family=Raleway&family=Roboto&family=Slabo+13px&family=Slabo+27px&family=Source+Sans+3&family=Work+Sans&family=Young+Serif&display=swap');
