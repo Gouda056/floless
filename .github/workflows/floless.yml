@@ -22,11 +22,21 @@ jobs:
         run: |
           echo "CODE_PATH=/home/ubuntu/floless-website" >> $GITHUB_ENV
 
-      - name: Copy code to EC2
+      - name: SSH and Pull Code on EC2
         run: |
-          # Copy the repository code to the EC2 instance
-          rsync -avz ./ $CODE_PATH
-              
+          # Write the SSH key from GitHub Secrets to a file
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ssh_key.pem
+          chmod 600 ssh_key.pem
+          
+          # SSH into the EC2 instance
+          ssh -i ssh_key.pem -o StrictHostKeyChecking=no ubuntu@35.154.244.198 << 'ENDSSH'
+          # Navigate to the cloned repository directory
+          cd $CODE_PATH
+          # Pull the latest code from the repository
+          git pull origin dev
+          # Exit the SSH session
+          ENDSSH
+
       - name: install dependencies
         run: |
           cd $CODE_PATH && npm install
